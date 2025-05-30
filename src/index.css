@@ -1,0 +1,342 @@
+/* Apply base styles to html */
+html {
+  box-sizing: border-box;
+  font-size: 100%; /* Makes rem units predictable */
+  scroll-behavior: smooth; /* Smooth scrolling when navigating */
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  background-color: #111;
+  color: #f8f8f8;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Inherit box-sizing for all elements */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+#dots-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  background: transparent;
+}
+
+
+/* HEADER */
+
+.site-header {
+  font-weight: bold;
+}
+
+.site-header a {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.site-header-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  font-size: 1rem;
+}
+
+a {
+  transition: transform 0.2s ease;
+  text-decoration: none;
+  color: #f8f8f8;
+}
+
+.site-header-nav a:hover {
+  transform: translateY(-3px);
+}
+
+.site-header-nav a:active {
+  transform: translateY(-5px);
+}
+
+
+/* PRESENTATION */
+
+.presentation {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+}
+
+.typewriter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 3.5rem;
+  font-family: monospace;
+  text-align: center;
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.06em;
+  height: 1em;
+  background-color: #f8f8f8;
+  margin-left: 0.2em;
+  animation: blink 0.7s steps(1) infinite;
+  vertical-align: middle;
+}
+
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+#subtitle {
+  font-size: 1.5rem;
+}
+
+.fade-in-hidden {
+  opacity: 0;
+  transition: opacity 1.5s ease-in;
+}
+
+.fade-in-visible {
+  opacity: 1;
+}
+
+.presentation-button {
+  padding: 0.75rem 1.5rem;
+  margin-top: 20px;
+  background-color: #272c32;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, opacity 1.5s ease-in;
+}
+
+.presentation-button:hover {
+  background-color: #1e2328;
+  transform: translateY(-3px);
+}
+
+.presentation-button:active {
+  transform: translateY(0);
+}
+
+
+/* SOCIALS */
+
+.socials {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  font-size: 25px;
+  z-index: 1000;
+  display: flex;      
+  gap: 12px;          
+}
+
+
+.socials a i {
+  color: white;
+  margin-left: 0px;
+}
+
+.linkedin, .github {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.linkedin:hover, .github:hover {
+  opacity: 1;
+}
+
+
+/* ABOUT SECTION */
+
+.about-container {
+  display: flex;            /* enable flexbox */
+  justify-content: center;  /* horizontal center */
+  align-items: center;      /* vertical center */
+  height: calc(100vh - 80px);
+  margin: 0 auto;
+  max-width: 800px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.cover-photo {
+  max-width: 300px;
+  height: auto;
+  border-radius: 100%;
+}
+
+.home-description {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.about-description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+
+/* PROJECTS SECTION */
+
+.typewriter-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: monospace;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 0.7s steps(8, end) forwards;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 8ch }
+}
+
+
+/* PROJECT BOXES */
+
+.projects {
+  max-width: 1000px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.project-box {
+  display: flex;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.project-box:hover {
+  transform: translateY(-5px);
+}
+
+.image-link {
+  position: relative;
+  display: block;
+  flex: 0 0 200px;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.image-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 12px 0 0 12px;
+}
+
+.redirect-icon {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  color: #f8f8f8;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  pointer-events: none;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.project-info {
+  flex: 1;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #f8f8f8;
+}
+
+.project-info h3 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+}
+
+.project-info p {
+  margin: 0;
+  color: #ccc;
+  font-size: 1rem;
+}
+
+
+/* SLIDE-IN ANIMATIONS */
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left,
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(0);
+}
+
+.animate-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}

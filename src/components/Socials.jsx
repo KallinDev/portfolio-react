@@ -1,0 +1,23 @@
+// src/components/Socials.jsx
+export default function Socials() {
+  return (
+        <div className="socials">
+          <a
+            className="linkedin"
+            href="https://www.linkedin.com/in/gustavkallin/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-linkedin"></i>
+          </a>
+          <a
+            className="github"
+            href="https://github.com/yasariz"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-github"></i>
+          </a>
+        </div>
+  );
+}
