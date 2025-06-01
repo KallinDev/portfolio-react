@@ -89,7 +89,7 @@ export default function BackgroundEffect() {
     }
 
     const dots = [];
-    const DOT_COUNT = 350;
+    const DOT_COUNT = 250;
     for (let i = 0; i < DOT_COUNT; i++) {
       dots.push(new Dot());
     }
