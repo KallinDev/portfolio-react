@@ -633,12 +633,12 @@ body {
    ========================= */
 @media (max-width: 600px) {
   .about-description {
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.15;
     max-width: 98vw;
     padding: 0 2vw;
     margin-top: 6px;
-    margin-bottom: 6px;
+    margin-bottom: 50px;
     letter-spacing: 0.01em;
   }
   .about-description p {
