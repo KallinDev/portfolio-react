@@ -7,6 +7,7 @@ import FadeInText from "../components/FadeInText";
 import { useSlideInAnimation } from "../components/FadeIn";
 import project1 from "../assets/project-1.png";
 import project2 from "../assets/project-2.png";
+import project3 from "../assets/project-3.png";
 import Typewriter from "../components/Typewriter";
 import PageTransition from "../components/PageTransition"; // <-- import this
 
@@ -35,6 +36,18 @@ const projects = [
         It has a full-on working backend with a database that stores product
         data and loads it dynamically. <br />
         (Backend takes a while to boot)
+      </>
+    ),
+  },
+  {
+    title: "Portfolio",
+    image: project3,
+    link: "https://kallin.pro/",
+    description: (
+      <>
+        A modern, fully responsive portfolio website using React to showcase my
+        work, skills, projects and contact information. It highlights clean
+        UI/UX design, reusable components, and clean responsiveness.
       </>
     ),
   },
