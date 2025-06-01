@@ -629,22 +629,31 @@ body {
 }
 
 /* =========================
-   MOBILE: COMPACT ABOUT DESCRIPTION & PROJECTS
+   ABOUT PAGE RESPONSIVENESS
    ========================= */
-@media (max-width: 600px) {
-  .about-description {
-    font-size: 0.95rem;
-    line-height: 1.0;
-    max-width: 98vw;
-    padding-bottom: 50px !important;
-    letter-spacing: 0.01em;
+@media (max-width: 700px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    max-height: calc(100vh - 80px);
+    padding: 24px 0 60px 0;
+    min-height: unset;
   }
-  .about-description p {
-    margin: 0 0 6px 0;
+  .text-content {
+    width: 100%;
+    padding: 0 4vw;
+    box-sizing: border-box;
+  }
+  .typewriter-container {
+    font-size: 2rem;
     padding: 0;
+    gap: 0.5rem;
+    width: 100%;
   }
-  .about-description br {
-    display: none;
+  .cover-photo {
+    max-width: 60vw;
+    margin: 0 auto 18px auto;
+    display: block;
   }
   .projects {
     margin-bottom: 50px !important;
