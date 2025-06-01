@@ -66,5 +66,18 @@ export default function BackgroundEffect() {
     };
   }, []);
 
-  return <canvas id="dots-canvas" ref={canvasRef} style={{position: "fixed", top:0, left:0, zIndex: -1, width: "100%", height: "100%"}} />;
+  return (
+    <canvas
+      id="dots-canvas"
+      ref={canvasRef}
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        zIndex: -1,
+        width: "100%",
+        height: "100%",
+      }}
+    />
+  );
 }

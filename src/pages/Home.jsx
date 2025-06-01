@@ -1,12 +1,12 @@
 import React from "react";
 import BackgroundEffect from "../components/BackgroundEffect";
-import Typewriter from "../components/Typewriter";
 import AboutFadeInText from "../components/AboutFadeInText";
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import '../index.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "../index.css";
 import Header from "../components/Header";
 import Socials from "../components/Socials";
-import HomeFadeInText from "../components/HomeFadeInText";
+import FadeInText from "../components/FadeInText";
+import Typewriter from "../components/Typewriter";
 
 export default function Home() {
   return (
@@ -16,13 +16,21 @@ export default function Home() {
       <Header />
 
       <main className="presentation">
-        <Typewriter text="Hello World, I'm Gustav👋" showSubtitleAndButton={true} />
+        <section className="home-container">
+          <h2 className="typewriter-title">
+            <Typewriter text="Hello World, I'm Gustav👋" speed={100} />
+          </h2>
+        </section>
 
         {/* Add subtitle and button here if Typewriter doesn't render them */}
-        <HomeFadeInText />
-
+        <FadeInText>
+          <div>Full-Stack Developer based in Västerås</div>
+          <a href="/projects">
+            <button className="presentation-button">See Portfolio</button>
+          </a>
+        </FadeInText>
       </main>
-      
+
       <Socials />
     </>
   );
