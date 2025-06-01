@@ -629,6 +629,10 @@ body {
 }
 
 /* =========================
+   MOBILE: COMPACT ABOUT DESCRIPTION & PROJECTS
+   ========================= */
+@media (max-width: 600px) {
+/* =========================
    ABOUT PAGE RESPONSIVENESS
    ========================= */
 @media (max-width: 700px) {
@@ -636,6 +640,7 @@ body {
     flex-direction: column;
     align-items: center;
     max-height: calc(100vh - 80px);
+    height: auto;
     padding: 24px 0 60px 0;
     min-height: unset;
   }
@@ -655,6 +660,7 @@ body {
     margin: 0 auto 18px auto;
     display: block;
   }
+}
   .projects {
     margin-bottom: 50px !important;
   }
