@@ -4,6 +4,7 @@ import Socials from "../components/Socials";
 import BackgroundEffect from "../components/BackgroundEffect";
 import Typewriter from "../components/Typewriter";
 import FadeInText from "../components/FadeInText";
+import PageTransition from "../components/PageTransition";
 
 const skills = [
   { name: "HTML5", icon: <i className="fab fa-html5"></i> },
@@ -37,35 +38,36 @@ const Skills = () => {
 
   return (
     <>
-      <BackgroundEffect />
       <Header />
-      <main>
-        <section className="skills-container">
-          <h2 className="typewriter-title">
-            <Typewriter text="Skills" speed={100} />
-          </h2>
-          <FadeInText className="skills-description">
-            <div>
-              I enjoy building modern web applications using a variety of
-              technologies. My skill set spans between both frontend and backend
-              development, and I’m always eager to learn new tools and
-              frameworks to create better user experiences.
-            </div>
-          </FadeInText>
-          <div className="skills-grid">
-            {skills.map((skill, i) => (
-              <div
-                className="skill-card"
-                key={skill.name}
-                ref={(el) => (cardRefs.current[i] = el)}
-              >
-                <span className="skill-icon">{skill.icon}</span>
-                <span className="skill-name">{skill.name}</span>
+      <PageTransition triggerKey="skills">
+        <main>
+          <section className="skills-container">
+            <h2 className="typewriter-title">
+              <Typewriter text="Skills" speed={100} />
+            </h2>
+            <FadeInText className="skills-description">
+              <div>
+                I enjoy building modern web applications using a variety of
+                technologies. My skill set spans between both frontend and
+                backend development, and I’m always eager to learn new tools and
+                frameworks to create better user experiences.
               </div>
-            ))}
-          </div>
-        </section>
-      </main>
+            </FadeInText>
+            <div className="skills-grid">
+              {skills.map((skill, i) => (
+                <div
+                  className="skill-card"
+                  key={skill.name}
+                  ref={(el) => (cardRefs.current[i] = el)}
+                >
+                  <span className="skill-icon">{skill.icon}</span>
+                  <span className="skill-name">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </section>
+        </main>
+      </PageTransition>
       <Socials />
     </>
   );

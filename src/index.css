@@ -84,19 +84,20 @@ body {
   gap: 2rem;
 }
 
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
+.nav-link-btn {
+  background: none;
+  border: none;
   font-size: 1.1rem;
-  transition: color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+  transition: transform 0.2s ease;
 }
 
-.nav-links a:hover {
+.nav-link-btn:hover {
   transform: translateY(-2px) scale(1.03);
 }
 
-.nav-links a:active {
-  transform: translateY(-3px);
+.nav-link-btn:active {
+  transform: translateY(-3px) scale(1.10);
 }
 
 /* Responsive styles for header with fade in/out */
@@ -614,9 +615,21 @@ body {
   animation: fadeInUp 0.7s forwards;
 }
 
+.contact-link.animated {
+  opacity: 1;
+  animation: none;
+  transform: none; /* <-- Add this line */
+  /* This allows :hover to work perfectly */
+}
+
 .contact-link:hover {
   background: #1e2328;
   transform: translateY(-3px) scale(1.08);
+}
+
+.contact-link:active {
+  background: #1b1e23;
+  transform: translateY(-1px) scale(1.03);
 }
 
 .contact-link i {
@@ -631,4 +644,16 @@ body {
 }
 .contact-link:nth-child(3) {
   animation-delay: 0.8s;
+}
+
+.page-transition {
+  transition: opacity 0.5s, transform 0.5s;
+  opacity: 1;
+  transform: none;
+}
+
+.page-transition.animate-out {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  pointer-events: none;
 }

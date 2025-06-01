@@ -1,5 +1,4 @@
 import React from "react";
-import BackgroundEffect from "../components/BackgroundEffect";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../index.css";
 import Header from "../components/Header";
@@ -9,8 +8,8 @@ import { useSlideInAnimation } from "../components/FadeIn";
 import project1 from "../assets/project-1.png";
 import project2 from "../assets/project-2.png";
 import Typewriter from "../components/Typewriter";
+import PageTransition from "../components/PageTransition"; // <-- import this
 
-// 1. Define your projects array
 const projects = [
   {
     title: "Simple Weather App",
@@ -47,57 +46,61 @@ export default function Projects() {
 
   return (
     <>
-      <BackgroundEffect />
       <Header />
 
-      <main>
-        <section className="projects">
-          <h2 className="typewriter-title">
-            <Typewriter text="Projects" speed={100} />
-          </h2>
+      <PageTransition triggerKey="projects">
+        <main>
+          <section className="projects">
+            <h2 className="typewriter-title">
+              <Typewriter text="Projects" speed={100} />
+            </h2>
 
-          <FadeInText className="projects-description">
-            <div>
-              Explore a selection of my web development projects, showcasing my
-              skills in both frontend and backend technologies. Each project
-              highlights my passion for building modern, responsive, and
-              user-friendly applications. <br />
-              Click any project to learn more or view it live!
-            </div>
-          </FadeInText>
-
-          <div className="projects-grid">
-            {projects.map((project, idx) => (
-              <div
-                className={`project-wrapper ${
-                  idx % 2 === 0 ? "slide-in-left" : "slide-in-right"
-                }`}
-                key={project.title}
-              >
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-box image-link"
-                  aria-label={`Go to ${project.title}`}
-                  style={{ textDecoration: "none", color: "inherit" }}
-                >
-                  <div className="project-image-wrapper">
-                    <img src={project.image} alt={project.title} />
-                    <span className="redirect-icon">
-                      <i className="fa fa-external-link" aria-hidden="true"></i>
-                    </span>
-                  </div>
-                  <div className="project-info">
-                    <h3>{project.title}</h3>
-                    <p>{project.description}</p>
-                  </div>
-                </a>
+            <FadeInText className="projects-description">
+              <div>
+                Explore a selection of my web development projects, showcasing
+                my skills in both frontend and backend technologies. Each
+                project highlights my passion for building modern, responsive,
+                and user-friendly applications. <br />
+                Click any project to learn more or view it live!
               </div>
-            ))}
-          </div>
-        </section>
-      </main>
+            </FadeInText>
+
+            <div className="projects-grid">
+              {projects.map((project, idx) => (
+                <div
+                  className={`project-wrapper ${
+                    idx % 2 === 0 ? "slide-in-left" : "slide-in-right"
+                  }`}
+                  key={project.title}
+                >
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-box image-link"
+                    aria-label={`Go to ${project.title}`}
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    <div className="project-image-wrapper">
+                      <img src={project.image} alt={project.title} />
+                      <span className="redirect-icon">
+                        <i
+                          className="fa fa-external-link"
+                          aria-hidden="true"
+                        ></i>
+                      </span>
+                    </div>
+                    <div className="project-info">
+                      <h3>{project.title}</h3>
+                      <p>{project.description}</p>
+                    </div>
+                  </a>
+                </div>
+              ))}
+            </div>
+          </section>
+        </main>
+      </PageTransition>
 
       <Socials />
     </>
