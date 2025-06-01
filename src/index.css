@@ -373,6 +373,46 @@ body {
   align-items: stretch;
 }
 
+/* FADE IN UP ANIMATION FOR PROJECTS */
+.fadeInUp {
+  opacity: 0;
+  animation: fadeInUp 0.7s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.project-wrapper.fadeInUp {
+  opacity: 0;
+  animation: fadeInUp 0.7s forwards;
+}
+
+.project-wrapper.animated {
+  opacity: 1;
+  animation: none;
+  transform: none;
+}
+
+/* Staggered animation delays for project cards */
+.projects-grid .project-wrapper:nth-child(1) { animation-delay: 0.1s; }
+.projects-grid .project-wrapper:nth-child(2) { animation-delay: 0.22s; }
+.projects-grid .project-wrapper:nth-child(3) { animation-delay: 0.34s; }
+.projects-grid .project-wrapper:nth-child(4) { animation-delay: 0.46s; }
+.projects-grid .project-wrapper:nth-child(5) { animation-delay: 0.58s; }
+.projects-grid .project-wrapper:nth-child(6) { animation-delay: 0.7s; }
+.projects-grid .project-wrapper:nth-child(7) { animation-delay: 0.82s; }
+.projects-grid .project-wrapper:nth-child(8) { animation-delay: 0.94s; }
+.projects-grid .project-wrapper:nth-child(9) { animation-delay: 1.06s; }
+.projects-grid .project-wrapper:nth-child(10) { animation-delay: 1.18s; }
+
 .project-box {
   display: flex;
   flex-direction: column;
@@ -469,17 +509,6 @@ body {
 }
 
 /* SKILLS SECTION */
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px) scale(0.96);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
 
 .skills-container {
   min-height: 80vh;

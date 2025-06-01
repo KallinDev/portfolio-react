@@ -1,15 +1,14 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "../index.css";
 import Header from "../components/Header";
 import Socials from "../components/Socials";
 import FadeInText from "../components/FadeInText";
-import { useSlideInAnimation } from "../components/FadeIn";
 import project1 from "../assets/project-1.png";
 import project2 from "../assets/project-2.png";
 import project3 from "../assets/project-3.png";
 import Typewriter from "../components/Typewriter";
-import PageTransition from "../components/PageTransition"; // <-- import this
+import PageTransition from "../components/PageTransition";
 
 const projects = [
   {
@@ -55,7 +54,21 @@ const projects = [
 ];
 
 export default function Projects() {
-  useSlideInAnimation();
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    cardRefs.current.forEach((ref) => {
+      if (ref) {
+        ref.addEventListener(
+          "animationend",
+          () => {
+            ref.classList.add("animated");
+          },
+          { once: true }
+        );
+      }
+    });
+  }, []);
 
   return (
     <>
@@ -81,10 +94,10 @@ export default function Projects() {
             <div className="projects-grid">
               {projects.map((project, idx) => (
                 <div
-                  className={`project-wrapper ${
-                    idx % 2 === 0 ? "slide-in-left" : "slide-in-right"
-                  }`}
+                  className="project-wrapper fadeInUp"
                   key={project.title}
+                  ref={(el) => (cardRefs.current[idx] = el)}
+                  style={{ animationDelay: `${idx * 0.12 + 0.1}s` }}
                 >
                   <a
                     href={project.link}
