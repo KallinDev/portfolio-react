@@ -61,6 +61,15 @@ export default function Contact() {
               >
                 <i className="fab fa-github"></i>
               </a>
+              <a
+                href="https://x.com/KallinGustav"
+                className="contact-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (Twitter)"
+              >
+                <i className="fab fa-x-twitter"></i>
+              </a>
             </div>
           </section>
         </main>
