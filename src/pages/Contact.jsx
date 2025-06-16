@@ -53,7 +53,7 @@ export default function Contact() {
                 <i className="fab fa-linkedin"></i>
               </a>
               <a
-                href="https://github.com/yasariz"
+                href="https://github.com/KallinDev"
                 className="contact-link"
                 target="_blank"
                 rel="noopener noreferrer"

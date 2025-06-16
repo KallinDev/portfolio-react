@@ -12,7 +12,7 @@ export default function Socials() {
       </a>
       <a
         className="github"
-        href="https://github.com/yasariz"
+        href="https://github.com/KallinDev"
         target="_blank"
         rel="noopener noreferrer"
       >
