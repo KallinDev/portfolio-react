@@ -20,7 +20,7 @@ export default function Socials() {
       </a>
       <a
         className="twitter"
-        href="https://x.com/KallinGustav"
+        href="https://x.com/KallinDev"
         target="_blank"
         rel="noopener noreferrer"
       >
