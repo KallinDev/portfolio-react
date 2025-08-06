@@ -18,14 +18,6 @@ export default function Socials() {
       >
         <i className="fab fa-github"></i>
       </a>
-      <a
-        className="twitter"
-        href="https://x.com/KallinDev"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <i className="fab fa-x-twitter"></i>
-      </a>
     </div>
   );
 }
