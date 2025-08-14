@@ -25,7 +25,7 @@ export default function AboutFadeInText() {
         ref={coverPhotoRef}
       />
       <div className="about-description fade-in-hidden" ref={descriptionRef}>
-        Hi, I’m Gustav Kallin, a 23-year-old Full-Stack Developer based in
+        Hi, I’m Gustav Kallin, a 23-year-old Frontend Developer based in
         Västerås, Sweden. Ever since I wrote my first line of code, I’ve been
         fascinated by the way technology can bring ideas to life.
         <br />

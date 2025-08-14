@@ -22,7 +22,7 @@ export default function Home() {
           </section>
 
           <FadeInText>
-            <div>Full-Stack Developer based in Sweden</div>
+            <div>Frontend Developer based in Sweden</div>
             <Link to="/projects">
               <button className="presentation-button">See Portfolio</button>
             </Link>
