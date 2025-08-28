@@ -39,14 +39,15 @@ const projects = [
     ),
   },
   {
-    title: "Portfolio",
+    title: "Student Habit Tracker",
     image: project3,
-    link: "https://kallin.pro/",
+    link: "https://studenthabittracker.netlify.app/",
     description: (
       <>
-        A modern, fully responsive portfolio website using React to showcase my
-        work, skills, projects and contact information. It highlights clean
-        UI/UX design, reusable components, and clean responsiveness.
+        A modern, fully responsive habit tracking application built with React.
+        It allows students to track their daily habits, set goals, and visualize
+        their progress over time. The app features a clean UI/UX design and
+        leverages reusable components for a seamless user experience.
       </>
     ),
   },
