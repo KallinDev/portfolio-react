@@ -46,9 +46,7 @@ const projects = [
         A modern, fully responsive habit tracking application built with React.
         <br />
         It allows students to track their daily habits, set goals, and visualize
-        their progress over time. <br />
-        The app features a clean UI/UX design and leverages reusable components
-        for a seamless user experience.
+        their progress over time.
       </>
     ),
   },
